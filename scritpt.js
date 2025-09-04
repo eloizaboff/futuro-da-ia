@@ -50,7 +50,24 @@ alternativas:"Só a máquina" , "Você, com suas perguntas e escolhas"
  humanos?"
 alternativas:"Sim" , "não"
 ],
+},
+
+let atual = 0;
+let perguntaAtual;
+
+function mostraPerguntas() {
+caixaPerguntas.textContent = perguntaAtual.enunciado;
+mostraAlternativas();
 }
+
+function mostraAlternativas() {
+    for (const alternativa of perguntaAtual.alternativas) {
+    const alternativas = document. createElement("button")
+    botaoAlternativas.textContent = alternativas;
+    caixaAlternativas.appendChild(botaoAlternativas);
+    }
+}
+
 
 
 
