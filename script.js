@@ -1,4 +1,4 @@
-const caicaPrincipal = document.querySelector(".caixa-principal");
+const caixaPrincipal = document.querySelector(".caixa-principal");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document document.querySelector (".caixa-resultado");
 const caixaResultado = document.querySelector(".caixa-resultado");
@@ -8,7 +8,7 @@ const perguntas = [
 {
 enunciado:
 	"A inteligência artificial sempre decide sozinha ou depende 
-de como foi programada por humanos?"
+de como foi programada por humanos?" 
 
 alternativas: "Sempre decide sozinha", "Depende de como foi programada",
 },
