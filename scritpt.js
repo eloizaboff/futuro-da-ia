@@ -56,7 +56,7 @@ let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
-function mostraPerguntas() {
+function mostraPergunta() {
 caixaPerguntas.textContent = perguntaAtual.enunciado;
 mostraAlternativas();
 }
