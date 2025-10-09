@@ -79,7 +79,7 @@ function respostaSelecionada(opcaoSelecionada){
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = "  ";
+    caixaPerguntas.textContent = " Este teste tem como objetivo avaliar seus conhecimentos sobre Inteligência Artificial, por meio de perguntas simples que mostram o quanto você entende sobre como a IA funciona e se relaciona com os seres humanos. ";
     textoResultado.textContentm = historiaFinal;
     caixaAlternativas.textContent = "  ";
 }
