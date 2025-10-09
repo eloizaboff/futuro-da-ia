@@ -78,7 +78,12 @@ function respostaSelecionada(opcaoSelecionada){
     mostraPergunta();
 }
 
-mostraPergunta();
+function mostraResultado() {
+    caixaPerguntas.textContent = "  ";
+    textoResultado.textContentm = historiaFinal;
+    caixaAlternativas.textContent = "  ";
+}
 
+mostraPergunta();
 
 
