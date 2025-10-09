@@ -55,6 +55,7 @@ alternativas:"Sim" , "não"
 
 let atual = 0;
 let perguntaAtual;
+let historiaFinal = "";
 
 function mostraPergunta() {
 perguntaAtual = perguntas[atual];
@@ -65,7 +66,7 @@ mostraAlternativas();
 function mostraAlternativas() {
     for (const alternativa of perguntaAtual.alternativas) {
     const botaoAlternativas = document.createElement("button");
-    botaoAlternativas.textContent = alternativas;
+    botaoAlternativas.textContent = alternativa;
     caixaAlternativas.appendChild(botaoAlternativas);
     }
 }
