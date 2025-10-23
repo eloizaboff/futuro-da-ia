@@ -28,7 +28,7 @@ h1 {
 
 button {
   background-color:#f47efb;
-  color: #8bd7e5;
+  color:#f106b7;
   border: none;
   border-radius: 15px;
   padding: 15px;
@@ -59,7 +59,7 @@ footer {
 
 footer {
     position: fixed;      /* fixa o rodapé na tela */
-    bottom: 0;            /* na parte inferior */m
+    bottom: 0;            /* na parte inferior */
     left: 0;              /* alinhado à esquerda */
     width: 100%;          /* ocupa toda a largura da tela */
     background-color: #f8f9fc;
