@@ -1,89 +1,67 @@
 const caixaPrincipal = document.querySelector(".caixa-principal");
-const caixaPerguntas = document.querySelector (".caixa-perguntas")
+const caixaPerguntas = document.querySelector(".caixa-perguntas");
 const caixaAlternativas = document.querySelector(".caixa-alternativas");
 const caixaResultado = document.querySelector(".caixa-resultado");
 const textoResultado = document.querySelector(".texto-resultado");
 
 const perguntas = [
-{
-enunciado:
- "A inteligência artificial sempre decide sozinha ou depende 
-de como foi programada por humanos?"
-
-alternativas: ["Sempre decide sozinha"  "Depende de como foi programada" ]
-},
-{
-
-
-    [enunciado:
-"Quem cria e treina a inteligência artificial?"
-
-alternativas: ["Ela mesma", "Programadores e cientistas de dados"]
-
-],
-},
-
-
-
-{
-[
-    enunciado:
-     A IA pode aprender com os erros e melhorar?
-
-alternativas: "sim" , "nao"]
-}
-
-{
-
-
-[enunciado:
-"Quando você conversa com uma IA, quem define
- o rumo da conversa?"
-
-alternativas:"Só a máquina" , "Você, com suas perguntas e escolhas"]
-
-}
-{
-
-    
-[enunciado:
-"A inteligência artificial pode ter sentimentos iguais aos
- humanos?"
-alternativas:"Sim" , "não"
-],
-},
+  {
+    enunciado: "A inteligência artificial sempre decide sozinha ou depende de como foi programada por humanos?",
+    alternativas: ["Sempre decide sozinha", "Depende de como foi programada"]
+  },
+  {
+    enunciado: "Quem cria e treina a inteligência artificial?",
+    alternativas: ["Ela mesma", "Programadores e cientistas de dados"]
+  },
+  {
+    enunciado: "A IA pode aprender com os erros e melhorar?",
+    alternativas: ["Sim", "Não"]
+  },
+  {
+    enunciado: "Quando você conversa com uma IA, quem define o rumo da conversa?",
+    alternativas: ["Só a máquina", "Você, com suas perguntas e escolhas"]
+  },
+  {
+    enunciado: "A inteligência artificial pode ter sentimentos iguais aos humanos?",
+    alternativas: ["Sim", "Não"]
+  }
+];
 
 let atual = 0;
 let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta() {
-perguntaAtual = perguntas[atual];
-caixaPerguntas.textContent = perguntaAtual.enunciado;
-mostraAlternativas();
+  perguntaAtual = perguntas[atual];
+  caixaPerguntas.textContent = perguntaAtual.enunciado;
+  mostraAlternativas();
 }
 
 function mostraAlternativas() {
-    for (const alternativa of perguntaAtual.alternativas) {
+  caixaAlternativas.innerHTML = "";  // Limpar alternativas anteriores
+  for (const alternativa of perguntaAtual.alternativas) {
     const botaoAlternativas = document.createElement("button");
     botaoAlternativas.textContent = alternativa;
+    botaoAlternativas.onclick = () => respostaSelecionada(alternativa);
     caixaAlternativas.appendChild(botaoAlternativas);
-    }
+  }
 }
 
-function respostaSelecionada(opcaoSelecionada){
-    const afirmacoes = opcaoSelecionada.afirmacoes:
-    historiaFinal = afirmacoes;
-    atual++;
+function respostaSelecionada(opcaoSelecionada) {
+  historiaFinal += `Você escolheu: ${opcaoSelecionada}\n`; // Aqui você adiciona a escolha na história
+  atual++;
+  
+  if (atual < perguntas.length) {
     mostraPergunta();
+  } else {
+    mostraResultado();
+  }
 }
 
 function mostraResultado() {
-    caixaPerguntas.textContent = " Este teste tem como objetivo avaliar seus conhecimentos sobre Inteligência Artificial, por meio de perguntas simples que mostram o quanto você entende sobre como a IA funciona e se relaciona com os seres humanos. ";
-    textoResultado.textContentm = historiaFinal;
-    caixaAlternativas.textContent = "  ";
+  caixaPerguntas.textContent = "Este teste tem como objetivo avaliar seus conhecimentos sobre Inteligência Artificial, por meio de perguntas simples que mostram o quanto você entende sobre como a IA funciona e se relaciona com os seres humanos.";
+  textoResultado.textContent = historiaFinal;
+  caixaAlternativas.textContent = ""; // Limpar alternativas
 }
 
 mostraPergunta();
-
-

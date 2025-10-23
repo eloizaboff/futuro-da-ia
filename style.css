@@ -1,42 +1,41 @@
 :root {
- --cor-fundo: #477cab;
- --cor-principal: #0B0D20;
- --cor-secundaria:#212333;
- --cor-destaque:#8bd7e5;
- --cor-texto:#010c0e;
+  --cor-fundo: #477cab;
+  --cor-principal: #0B0D20;
+  --cor-secundaria: #212333;
+  --cor-destaque: #8bd7e5;
+  --cor-texto: #010c0e;
 }
 
 body {
-     background-color: var(--cor-fundo);
-     color: var(--cor-texto);
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     min-height: 100vh;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.caixa-principal{
-     background-color: #010c0e;
-     width: 90%;
-text-align: center;
-padding: 20px;
+.caixa-principal {
+  background-color: #010c0e;
+  width: 90%;
+  text-align: center;
+  padding: 20px;
 }
-h1{
-     color:var(--cor-destaque)
+
+h1 {
+  color: var(--cor-destaque);
 }
- button:hover {
-background-color:#8bd7e5
-color:#212333
- }
- button {
-background-color: #0B0D20;
-color:#8bd7e5
-border: none;
-border-radius: 15px;
-padding: 15px;
-transition background-color 0.3s;
- }
- button:hover{
-     background-color: #8bd7e5;
-     color:#010c0e
- }
+
+button {
+  background-color: #0B0D20;
+  color: #8bd7e5;
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #8bd7e5;
+  color: #010c0e;
+}
