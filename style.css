@@ -16,7 +16,7 @@ body {
 }
 
 .caixa-principal {
-  background-color: #010c0e;
+  background-color: #f8b7f2e8;
   width: 90%;
   text-align: center;
   padding: 20px;
@@ -27,7 +27,7 @@ h1 {
 }
 
 button {
-  background-color: #0B0D20;
+  background-color:#f47efb;
   color: #8bd7e5;
   border: none;
   border-radius: 15px;
@@ -36,6 +36,6 @@ button {
 }
 
 button:hover {
-  background-color: #8bd7e5;
-  color: #010c0e;
+  background-color:#f47efb;
+  color: #f9fdfe;
 }
